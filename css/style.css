@@ -113,3 +113,39 @@ h1 {
   border-width: 8px 0 8px 16px;
   border-color: transparent transparent transparent var(--secondary-color);
 }
+
+@media (max-width: 900px) {
+  #linha-do-tempo ul li div {
+    width: 250px;
+  }
+
+  /* Caixa da esquerda vem para a direita para ficar na tela */
+  #linha-do-tempo ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+
+@media (max-width: 600px) {
+  #linha-do-tempo ul li {
+    /* distancia na esquerda entre a linha reta e a tela */
+    margin-left: 20px;
+  }
+
+  #linha-do-tempo ul li div {
+    /* Cálculo dinâmico da caixa dependendo do vw da tela */
+    width: calc(100vw - 90px);
+  }
+
+  #linha-do-tempo ul li:nth-child(even) div {
+    /* Caixa da esquerda vem para a direita */
+    left: 40px;
+  }
+
+  #linha-do-tempo ul li:nth-child(even) div:before {
+    /* Seta caixa esquerda vem para esquerda */
+    left: -15px;
+    /* "Criando" a seta */
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--secondary-color) transparent transparent;
+  }
+}
