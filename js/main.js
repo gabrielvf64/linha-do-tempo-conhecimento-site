@@ -1,4 +1,4 @@
-const items = document.querySelectorAll("#linha-do-tempo li");
+const items = document.querySelectorAll('#linha-do-tempo li');
 
 const estaNaViewport = el => {
   const rect = el.getBoundingClientRect();
